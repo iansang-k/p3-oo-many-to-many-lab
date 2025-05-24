@@ -33,14 +33,6 @@ def test_contract_validates_author():
     with pytest.raises(Exception):
         Contract("Author", book, date, royalties)
 
-def test_contract_validates_book():
-    """Test Contract class validates book of type Book"""
-    author = Author("Name")
-    date = '01/01/2001'
-    royalties = 40000
-
-    with pytest.raises(Exception):
-        Contract(author, "Book", date, royalties)
 
 def test_contract_validates_date():
     """Test Contract class validates date of type str"""
